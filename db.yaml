@@ -1,4 +1,4 @@
-- name: configure db derver
+- name: configure DB server
   hosts: db
   become: yes
   vars:
@@ -6,7 +6,7 @@
   tasks:
   - name: Install MYSQL Server
     ansible.builtin.dnf:
-    - name: mysql-server
+      name: mysql-server
       state: latest
 
   - name: Start and enable mysql
