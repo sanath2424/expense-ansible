@@ -13,10 +13,15 @@
       state: started
       enabled: yes
 
-  # - name: remove defualt content
+  - name: delete default website
+    ansible.builtin.file:
+      path: /usr/share/nginx/html
+      state: absent
+
+  # - name: create html directory
   #   ansible.builtin.file:
-  #     path: /usr/share/nginx/html/*
-  #     state: absent
+  #     path: /usr/share/nginx/html
+  #     state: directory
 
   # - name: download Frontend content
   #   ansible.builtin.get_url:
