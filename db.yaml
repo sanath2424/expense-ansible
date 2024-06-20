@@ -4,7 +4,7 @@
   vars:
     login_host: db.dap15.online
   tasks:
-  - name: install MYSQL server
+  - name: Install MYSQL Server
     ansible.builtin.dnf:
     - name: mysql-server
       state: latest
